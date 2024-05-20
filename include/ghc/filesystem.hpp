@@ -48,6 +48,13 @@
 #elif defined(_WIN32)
 #define GHC_OS_WINDOWS
 #define GHC_OS_WIN32
+#elif defined(__MSYS__)
+#define GHC_OS_WINDOWS
+#define GHC_OS_WIN32
+#define GHC_OS_CYGWIN
+#define _S_IFDIR S_IFDIR
+#define _S_IFREG S_IFREG
+#define _S_IFCHR S_IFCHR
 #elif defined(__CYGWIN__)
 #define GHC_OS_CYGWIN
 #elif defined(__sun) && defined(__SVR4)
